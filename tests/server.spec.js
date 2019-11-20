@@ -10,7 +10,6 @@ server.listen(4444);
 describe('server.js', function() {
   this.timeout(5000);
   beforeEach((done) => {
-    
     done();
   });
 
