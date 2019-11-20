@@ -138,11 +138,11 @@ a {
   }
 
   .grid-three {
-    display: block;
+    display: inline-block;
   }
     
   .grid-two {
-    display: block;
+    display: inline-block;
     padding: 10px 15px;
   }
   
