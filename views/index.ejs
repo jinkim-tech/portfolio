@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+  <link href='/css/style.css' rel='stylesheet' type='text/css'>
+  <meta charset='UTF-8'>
+  <title> Home | Jin.Kim </title>
+</head>
+
+<body>
+  <div class='container'>
+    <ul class='navbar-list'>
+      <li class='navbar-item'>
+        <a class='navbar-link' href='/'>Home</a>
+      </li>
+      <li class='navbar-item'>
+        <a class='navbar-link' href='/projects'>Projects</a>
+      </li>
+      <li class='navbar-item'>
+        <a class='navbar-link' href='/resume'>Resume</a>
+      </li>
+      <li class='navbar-item'>
+        <a class='navbar-link' href='/contact'>Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class='container'>
+    <h4 class='tag'>Hi! I'm <%= person.firstName %>,<br>and this is my portfolio.</h4>
+    <img src='/img/main-main.jpg' class='image'>
+  </div>
+  <a href='/resume'>
+    <div class='container sub-title'>
+      About me
+    </div>
+  </a>
+
+  <div class='container grid-three'>
+    <div class='grid-two'>
+      <img src='/img/main-information.png' class='icon'>
+      <div class='text'>A motivated full stack junior web developer with online marketing background.</div>
+    </div>
+    <div class='grid-two'>
+      <img src='/img/main-skill.png' class='icon'>
+      <div class='text'> HTML, CSS, Javascript, Node, Express, MySQL, MongoDB, Loopback, React, Git, Mocha, Chai</div>
+    </div>
+    <div class='grid-two'>
+      <img src='/img/main-search.png' class='icon'>
+      <div class='text'>Looking to apply my skills in a junior software engineering position!</div>
+    </div>
+  </div>
+
+  <a href='/projects'>
+    <div class='container sub-title'>
+      Projects
+    </div>
+  </a>
+
+  <div class='container grid-two'>
+    <a href='https://bit.ly/2X14byy' target='_blank'>
+      <img src='/img/project-wild-flag.png' class='screenshot'>
+    </a>
+    <div>
+      <div class='bold-subject'>Wild Flag</div>
+      <div class='text'>
+        <b>Info:</b>
+        <br>
+        An inter-agency deconfliction application that creates a simple, secure, yet profoundly effective centralized
+        deconfliction portal for distributing counter-poaching efforts among NGOs.
+        <br>
+        <br>
+        <b>Tech:</b>
+        <br>
+        ReactJS, MySQL, NodeJS, Passport.js and bcrypt
+      </div>
+      <div class='inline'>
+        <a href='https://bit.ly/2X14byy' target='_blank'>
+          <button>Demo</button>
+        </a>
+        <a href='https://github.com/mikasd/zoohack' target='_blank'>
+          <button>Github</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class='container grid-two'>
+    <a href='https://lunch-selector.herokuapp.com/' target='_blank'>
+      <img src='/img/project-lunch-selector.png' class='screenshot'>
+    </a>
+    <div>
+      <div class='bold-subject'>Lunch Selector</div>
+      <div class='text'>
+        <b>Info:</b>
+        <br>
+        A simple lunch selector using Pixabay API to choose your lunch so easy.
+        <br>
+        <br>
+        <b>Tech:</b>
+        <br>
+        ReactJS, Express, Heroku, and CircleCI
+      </div>
+      <div class='inline'>
+        <a href='https://lunch-selector.herokuapp.com/' target='_blank'>
+          <button>Demo</button>
+        </a>
+        <a href='https://github.com/jinkim-tech/simple-lunch-selector' target='_blank'>
+          <button>Github</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<footer>
+  <div class='footer'>
+    <a href='https://www.linkedin.com/in/jinkim-tech/' target='_blank'>
+      <img src='/img/footer-linkedin.png' class='link-icon'>
+    </a>
+    <a href='https://github.com/jinkim-tech' target='_blank'>
+      <img src='/img/footer-github-logo.png' class='link-icon'>
+    </a>
+  </div>
+</footer>
+
+</html>
