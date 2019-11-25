@@ -4,7 +4,7 @@
 
 <head>
   <link href='/css/style.css' rel='stylesheet' type='text/css'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title> Home | Jin.Kim </title>
 </head>
 
@@ -27,8 +27,9 @@
   </div>
 
   <div class='container'>
-    <h4 class='tag'>Hi! I'm <%= person.firstName %>,<br>and this is my portfolio.</h4>
-    <img src='/img/main-main.jpg' class='image'>
+    <div class='main-image'>
+      <h4 class='tag'>Hi! I'm <%= person.firstName %>,<br>and this is my portfolio.</h4>
+    </div>
   </div>
   <a href='/resume'>
     <div class='container sub-title'>
@@ -76,7 +77,7 @@
       </div>
       <div class='inline'>
         <a href='https://bit.ly/2X14byy' target='_blank'>
-          <button>Demo</button>
+          <button >Demo</button>
         </a>
         <a href='https://github.com/mikasd/zoohack' target='_blank'>
           <button>Github</button>
@@ -111,7 +112,6 @@
       </div>
     </div>
   </div>
-
 </body>
 
 <footer>
@@ -124,5 +124,4 @@
     </a>
   </div>
 </footer>
-
 </html>
