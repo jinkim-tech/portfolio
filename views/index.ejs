@@ -9,8 +9,28 @@
 </head>
 
 <body>
-  <div class='container'>
+  <div class='container menu-container'>
     <ul class='navbar-list'>
+      <li class='navbar-item'>
+        <a class='navbar-link' href='/'>Home</a>
+      </li>
+      <li class='navbar-item'>
+        <a class='navbar-link' href='/projects'>Projects</a>
+      </li>
+      <li class='navbar-item'>
+        <a class='navbar-link' href='/resume'>Resume</a>
+      </li>
+      <li class='navbar-item'>
+        <a class='navbar-link' href='/contact'>Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class='container hamburger-container'>
+    <p class='hamburger-button' onclick='hamburger()'>
+      &#9776
+    </p>
+    <ul id='navbar-list-hamburger'>
       <li class='navbar-item'>
         <a class='navbar-link' href='/'>Home</a>
       </li>
@@ -40,7 +60,7 @@
   <div class='container grid-three'>
     <div class='grid-two'>
       <img src='/img/main-information.png' class='icon'>
-      <div class='text'>A motivated full stack junior web developer with online marketing background.</div>
+      <div class='text'>A motivated full stack junior web developer with digital marketing background.</div>
     </div>
     <div class='grid-two'>
       <img src='/img/main-skill.png' class='icon'>
@@ -77,7 +97,7 @@
       </div>
       <div class='inline'>
         <a href='https://bit.ly/2X14byy' target='_blank'>
-          <button >Demo</button>
+          <button>Demo</button>
         </a>
         <a href='https://github.com/mikasd/zoohack' target='_blank'>
           <button>Github</button>
@@ -112,6 +132,16 @@
       </div>
     </div>
   </div>
+  <script>
+    function hamburger() {
+      var x = document.getElementById('navbar-list-hamburger')
+      if (x.style.display === 'none') {
+        x.style.display = 'block';
+      } else {
+        x.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 
 <footer>
@@ -124,4 +154,5 @@
     </a>
   </div>
 </footer>
+
 </html>

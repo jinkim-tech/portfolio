@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class='container'>
+  <div class='container menu-container'>
     <ul class='navbar-list'>
       <li class='navbar-item'>
         <a class='navbar-link' href='/'>Home</a>
@@ -26,6 +26,27 @@
     </ul>
   </div>
 
+  <div class='container hamburger-container'>
+    <p class='hamburger-button' onclick='hamburger()'>
+      &#9776
+    </p>
+    <ul id='navbar-list-hamburger'>
+      <li class='navbar-item'>
+        <a class='navbar-link' href='/'>Home</a>
+      </li>
+      <li class='navbar-item'>
+        <a class='navbar-link' href='/projects'>Projects</a>
+      </li>
+      <li class='navbar-item'>
+        <a class='navbar-link' href='/resume'>Resume</a>
+      </li>
+      <li class='navbar-item'>
+        <a class='navbar-link' href='/contact'>Contact</a>
+      </li>
+    </ul>
+  </div>
+
+
   <div class='container sub-title'>
     Resume
   </div>
@@ -36,7 +57,17 @@
     </a>
     <div class='text'>Click to download...</div>
   </div>
-
+  
+  <script>
+    function hamburger() {
+      var x = document.getElementById('navbar-list-hamburger')
+      if (x.style.display === 'none') {
+        x.style.display = 'block';
+      } else {
+        x.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 
 <footer>
