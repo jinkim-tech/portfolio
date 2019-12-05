@@ -35,10 +35,6 @@ app.get('/contact', (req, res) => {
   res.render('contact');
 })
 
-app.get('/.well-known/acme-challenge/sqGgrsMRncLPnSDxDJ_WDQPNQ_4sQ4eHezAlRibrizU', (req, res) => {
-  res.render('https');
-})
-
 app.get('*', function (req, res) {
   res.send('Page not found 404').status(404);
 })
