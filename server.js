@@ -35,7 +35,7 @@ app.get('/contact', (req, res) => {
   res.render('contact');
 })
 
-app.get('/.well-known/acme-challenge/:id', (req, res) => {
+app.get('/.well-known/acme-challenge/-seWrs5vxvvbtBVrbdcJTJuyIg1oz4GQwkywvIq74u4', (req, res) => {
   res.render('https');
 })
 
