@@ -14,9 +14,11 @@
   display: none;
 }
 .hamburger-button{
+  display: inline;
   font-size: 20px;
   color: #222831;
   margin: 0;
+  position: relative;
 }
 .menu-container {
   margin-top: 3px;
@@ -66,7 +68,7 @@
   position: absolute;
   margin: 12% 5%;
   padding: 15px;
-  z-index: 1000;
+  z-index: 1;
   background-color: #222831;
   opacity: 0.9;
   color: #FFFFFF;
@@ -81,6 +83,7 @@
   color: #222831;
   border-bottom: 1px solid #E1E1E1; 
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 .grid-three {
   display: grid;
@@ -141,11 +144,21 @@ a {
   margin-right: auto;
   width: 50%;
 }
+.spacer {
+    min-height: 23px;
+    display: block;
+    width: 100%;
+}
 @media (max-width: 500px) {
   .menu-container{
     display: none;
   }
   .hamburger-container{
+    z-index: 2;
+    position: fixed;
+    background: white;
+    width: 100vh;
+    padding: 3% 8%;
     display: block;
     margin-bottom: 20px
   }
@@ -154,6 +167,7 @@ a {
     margin-bottom: 0px;
   }
   .main-image {
+    margin-top: 30px;
     background-position: right;
     height: 200px;
   }
@@ -210,7 +224,9 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
+  color: #222; 
+  margin: 0px;
+}
 h4 {
   margin-top: 0;
   margin-bottom: 2rem;
