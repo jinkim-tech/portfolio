@@ -10,4 +10,4 @@ This is my personal portfolio
 * CircleCI
 
 ## Check it out
-visit https://jinkim.tech
+visit https://jinkim.me
