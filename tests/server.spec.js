@@ -1,29 +1,55 @@
-const chai = require('chai');
-const chaiHttp = require('chai-http');
-const server = require('../server');
+const express = require('express');
+const expect = require('chai').expect;
+const path = require('path');
+const Nightmare = require('nightmare');
 
-chai.use(chaiHttp);
-const expect = chai.expect;
+const app = express();
 
-server.listen(4444);
+app.use(express.static(path.join(__dirname, '../public')));
 
-describe('server.js', function() {
-  this.timeout(5000);
-  beforeEach((done) => {
-    done();
-  });
+describe('End to End', function() {
+  this.timeout('30s')
 
-  afterEach((done) => {
-      done();
+  let nightmare = null
+  beforeEach(() => {
+    nightmare = new Nightmare()
   })
 
-  it('responds to /', (done) => {
-    chai.request(server)
-      .get('/')
-      .end((err, res) => {
-        expect(err).not.exist;
-        expect(res).to.have.status(200);
-        done();
-      });
-  });
+  describe('Load a Page', () => {
+    it('should load / (Home Page) without error', done => {
+      nightmare.goto('http://localhost:3000')
+        .end()
+        .then(function (result) { done() })
+        .catch(done)
+    })
+
+    it('should load /contact (Contact Page) without error', done => {
+      nightmare.goto('http://localhost:3000/contacts')
+        .end()
+        .then(function (result) { done() })
+        .catch(done)
+    })
+  })
+
+  describe('Links', () => {
+    it('should have a proper linkedin link', done => {
+      nightmare
+        .goto('http://localhost:3000')
+        .evaluate(() => document.querySelector('.linkedin').href)
+        .then((link) => {
+          expect(link).to.equal('https://www.linkedin.com/in/jinkim-tech/')
+          done()
+        })
+    })
+
+    it('should have a proper linkedin link', done => {
+      nightmare
+        .goto('http://localhost:3000')
+        .evaluate(() => document.querySelector('.linkedin').href)
+        .then((link) => {
+          expect(link).to.equal('https://www.linkedin.com/in/jinkim-tech/')
+          done()
+        })
+    })
+  })
 })
